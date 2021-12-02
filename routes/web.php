@@ -16,6 +16,16 @@ use App\Http\Controllers\Admin;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
+
+
+*/
 
 Route::get('/', function () {
     return view('welcome');
